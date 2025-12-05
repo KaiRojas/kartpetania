@@ -63,7 +63,9 @@ export default function OwnVehicleRatesPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    <h2 className="text-2xl font-bold text-white mb-6 text-center">{t('vehicleTypesTitle')}</h2>
+                    <h2 className="text-3xl font-black text-white mb-6 text-center uppercase tracking-wide border-b border-blue-500/30 pb-4">
+                        <span className="text-blue-400">●</span> {t('vehicleTypesTitle')}
+                    </h2>
                     <div className="grid md:grid-cols-3 gap-6">
                         {/* Motorcycles */}
                         <div className="bg-gradient-to-br from-orange-900/20 to-slate-900 rounded-2xl p-6 border border-orange-500/30">
@@ -113,7 +115,9 @@ export default function OwnVehicleRatesPage() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                     className="space-y-6"
                 >
-                    <h2 className="text-2xl font-bold text-white text-center">{t('importantInfoTitle')}</h2>
+                    <h2 className="text-3xl font-black text-white text-center uppercase tracking-wide border-b border-yellow-500/30 pb-4 mb-8">
+                        <span className="text-yellow-400">●</span> {t('importantInfoTitle')}
+                    </h2>
 
                     {/* Availability */}
                     <div className="bg-slate-800/50 rounded-2xl p-6 border border-white/10">
@@ -139,7 +143,17 @@ export default function OwnVehicleRatesPage() {
                             </div>
                             <div>
                                 <h3 className="font-bold text-white mb-2">{t('insuranceTitle')}</h3>
-                                <p className="text-gray-300 leading-relaxed">{t('insuranceText')}</p>
+                                <p className="text-gray-300 leading-relaxed mb-3">{t('insuranceDesc')}</p>
+                                <a
+                                    href="https://www.skm-segurosdeportivos.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-yellow-400 hover:text-yellow-300 font-medium transition-colors"
+                                >
+                                    <Shield className="w-4 h-4" />
+                                    {t('purchaseInsurance') || 'Purchase Sports Insurance'}
+                                    <ChevronRight className="w-4 h-4" />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -151,7 +165,7 @@ export default function OwnVehicleRatesPage() {
                                 <Ticket className="w-5 h-5 text-green-400" />
                             </div>
                             <div>
-                                <h3 className="font-bold text-white mb-2">{t('accessTitle')}</h3>
+                                <h3 className="text-xl font-bold text-white mb-2">{t('accessTitle')}</h3>
                                 <p className="text-gray-300 leading-relaxed">{t('accessText')}</p>
                             </div>
                         </div>

@@ -54,7 +54,8 @@
         "electricPolicyTitle": "INFORMACIÓN USUARIOS CON VEHÍCULOS ELÉCTRICOS",
         "electricPolicy": "LOS VEHÍCULOS ELÉCTRICOS NO PODRÁN RODAR, SIN LLEVAR CONSIGO UN EXTINTOR DE 5kg ESPECIAL DE CO2.",
         "privatePolicyTitle": "INFORMACIÓN USUARIOS KART PRIVADO",
-        "privatePolicy": "Para poder rodar los Domingos con kart privado, abriremos tandas libres siempre y cuando se junten un mínimo de 5 Karts."
+        "privatePolicy": "Para poder rodar los Domingos con kart privado, abriremos tandas libres siempre y cuando se junten un mínimo de 5 Karts.",
+        "importantInfo": "Información Importante"
     },
     "ServicesPage": {
         "title": "Servicios e Instalaciones",
@@ -116,6 +117,7 @@
         "rule2": "No se permite ropa suelta (bufandas, pañuelos) ni calzado abierto (chanclas).",
         "rule3": "Respetar las banderas y las indicaciones de los comisarios.",
         "rule4": "Prohibido el contacto deliberado entre karts.",
+        "kart270ccDesc": "Karts equipados con motor Honda 4 tiempos de 270cc. Este motor hará las delicias de todos, desde principiantes que nunca han conducido un kart, hasta aquellos con un poco más de experiencia.",
         "flagshipBadge": "Experiencia Estelar",
         "perfectForEveryone": "Perfecto para Todos",
         "ages12Plus": "Mayores de 12 años",
@@ -299,5 +301,54 @@
     "VideoGallery": {
         "title": "Acción en Pista",
         "subtitle": "Mira la acción llena de adrenalina en Kartpetania."
+    },
+    "UpcomingEvents": {
+        "upcomingEvent": "PRÓXIMO EVENTO",
+        "dontMissOut": "No te",
+        "missOut": "lo Pierdas",
+        "tagline": "¡Un año más, los más valientes se citan en KARTPETANIA! 🔥",
+        "raceDescription": "Una carrera de resistencia individual: <strong>100 vueltas</strong> en el trazado \"chicane\" o <strong>80 vueltas</strong> en el trazado \"competición\" si se superan 20 pilotos inscritos. ¡Un desafío donde está en juego la codiciada estatuilla <strong>KARTPETANO 2025</strong>!",
+        "uniqueTrophy": "Trofeo Único",
+        "trophyDesc": "La estatuilla KARTPETANO 2025 - al alcance de muy pocos",
+        "birel390cc": "BIREL 390cc",
+        "fleetDesc": "Flota de karts de alquiler especialmente preparados",
+        "raffleNotice": "Entre todos los participantes: ¡se sortearán <span>4 TANDAS GRATIS en KART 390CC</span>!",
+        "registeredDrivers": "Pilotos Inscritos",
+        "gridFull": "PARRILLA COMPLETA - 22 PILOTOS",
+        "hideDriverList": "Ocultar Lista de Pilotos",
+        "viewDriverList": "Ver Lista de Pilotos",
+        "downloadRegulation": "Descargar Reglamento (PDF)",
+        "december": "Diciembre",
+        "sunday": "Domingo"
+    },
+    "Location": {
+        "findUs": "Cómo",
+        "us": "Llegar",
+        "subtitle": "Situado en La Higuera, Segovia - a poca distancia de Madrid",
+        "address": "Dirección",
+        "getDirections": "Cómo Llegar",
+        "bookNow": "Reservar Ahora"
+    },
+    "Schedule": {
+        "decemberSchedule": "Calendario",
+        "rentalKart": "Kart Alquiler",
+        "specialEvent": "Evento Especial",
+        "bikesAllowed": "Motos Permitidas",
+        "date": "Fecha",
+        "morning": "Mañana",
+        "afternoon": "Tarde",
+        "sat": "Sáb",
+        "sun": "Dom",
+        "mon": "Lun",
+        "dec": "Dic"
+    },
+    "Hero": {
+        "experienceThe": "Siente la",
+        "adrenaline": "Adrenalina",
+        "subtitle": "Sumérgete en el mundo del karting profesional. Desde nuestro circuito técnico hasta nuestra flota de alto rendimiento."
+    },
+    "Gallery": {
+        "showLess": "Mostrar Menos",
+        "viewMore": "Ver Más Fotos"
     }
 }

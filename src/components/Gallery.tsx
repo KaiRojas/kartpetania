@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 const galleryImages = [
     {
@@ -53,6 +54,8 @@ const moreGalleryImages = [
 
 export default function Gallery() {
     const [expanded, setExpanded] = useState(false);
+    const t = useTranslations('Hero');
+    const g = useTranslations('Gallery');
 
     return (
         <section className="py-24 bg-slate-900">
@@ -65,10 +68,10 @@ export default function Gallery() {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-black italic text-white uppercase tracking-tight">
-                        Experience the <span className="text-red-600">Adrenaline</span>
+                        {t('experienceThe')} <span className="text-red-600">{t('adrenaline')}</span>
                     </h2>
                     <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-                        Immerse yourself in the world of professional karting. From our technical track to our high-performance fleet.
+                        {t('subtitle')}
                     </p>
                 </motion.div>
 
@@ -168,7 +171,7 @@ export default function Gallery() {
                         whileTap={{ scale: 0.95 }}
                     >
                         <span className="text-sm font-medium uppercase tracking-wider">
-                            {expanded ? 'Show Less' : 'View More Photos'}
+                            {expanded ? g('showLess') : g('viewMore')}
                         </span>
                         <motion.div
                             animate={{ rotate: expanded ? 180 : 0 }}

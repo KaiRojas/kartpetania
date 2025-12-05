@@ -5,11 +5,13 @@ import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import { useSeasonalEffects } from './SeasonalEffectsContext';
 
 export default function Navbar() {
     const t = useTranslations('Navigation');
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const seasonalEffects = useSeasonalEffects();
 
     const links = [
         { href: '/', label: t('home') },
@@ -51,21 +53,45 @@ export default function Navbar() {
                                 </Link>
                             ))}
                             <div className="flex items-center gap-3 ml-4 border-l border-white/20 pl-4">
+                                {seasonalEffects.currentSeason === 'winter' && (
+                                    <button
+                                        onClick={seasonalEffects.toggle}
+                                        className={`text-sm hover:scale-110 transition-all ${seasonalEffects.isEnabled
+                                            ? 'opacity-100'
+                                            : 'opacity-50 hover:opacity-100'
+                                            }`}
+                                        title={seasonalEffects.isEnabled ? 'Turn off snow' : 'Turn on snow'}
+                                    >
+                                        ❄️
+                                    </button>
+                                )}
                                 <Link
                                     href={pathname}
                                     locale="es"
-                                    className="text-xl hover:scale-110 transition-transform"
+                                    className="hover:scale-110 transition-transform"
                                     title="Español"
                                 >
-                                    🇪🇸
+                                    <svg className="w-6 h-5 rounded-sm shadow-sm" viewBox="0 0 640 480">
+                                        <rect fill="#c60b1e" width="640" height="480" />
+                                        <rect fill="#ffc400" y="120" width="640" height="240" />
+                                    </svg>
                                 </Link>
                                 <Link
                                     href={pathname}
                                     locale="en"
-                                    className="text-xl hover:scale-110 transition-transform"
+                                    className="hover:scale-110 transition-transform"
                                     title="English"
                                 >
-                                    🇺🇸
+                                    <svg className="w-6 h-5 rounded-sm shadow-sm" viewBox="0 0 640 480">
+                                        <rect fill="#bd3d44" width="640" height="480" />
+                                        <rect fill="#fff" y="37" width="640" height="37" />
+                                        <rect fill="#fff" y="111" width="640" height="37" />
+                                        <rect fill="#fff" y="185" width="640" height="37" />
+                                        <rect fill="#fff" y="259" width="640" height="37" />
+                                        <rect fill="#fff" y="333" width="640" height="37" />
+                                        <rect fill="#fff" y="407" width="640" height="37" />
+                                        <rect fill="#192f5d" width="256" height="259" />
+                                    </svg>
                                 </Link>
                             </div>
                         </div>
@@ -96,8 +122,36 @@ export default function Navbar() {
                             </Link>
                         ))}
                         <div className="flex items-center gap-4 px-3 py-2 border-t border-gray-700 mt-4">
-                            <Link href={pathname} locale="es" className="text-2xl" title="Español">🇪🇸</Link>
-                            <Link href={pathname} locale="en" className="text-2xl" title="English">🇺🇸</Link>
+                            {seasonalEffects.currentSeason === 'winter' && (
+                                <button
+                                    onClick={seasonalEffects.toggle}
+                                    className={`text-lg ${seasonalEffects.isEnabled
+                                        ? 'opacity-100'
+                                        : 'opacity-50'
+                                        }`}
+                                    title={seasonalEffects.isEnabled ? 'Turn off snow' : 'Turn on snow'}
+                                >
+                                    ❄️
+                                </button>
+                            )}
+                            <Link href={pathname} locale="es" className="hover:scale-110 transition-transform" title="Español">
+                                <svg className="w-8 h-6 rounded-sm shadow-sm" viewBox="0 0 640 480">
+                                    <rect fill="#c60b1e" width="640" height="480" />
+                                    <rect fill="#ffc400" y="120" width="640" height="240" />
+                                </svg>
+                            </Link>
+                            <Link href={pathname} locale="en" className="hover:scale-110 transition-transform" title="English">
+                                <svg className="w-8 h-6 rounded-sm shadow-sm" viewBox="0 0 640 480">
+                                    <rect fill="#bd3d44" width="640" height="480" />
+                                    <rect fill="#fff" y="37" width="640" height="37" />
+                                    <rect fill="#fff" y="111" width="640" height="37" />
+                                    <rect fill="#fff" y="185" width="640" height="37" />
+                                    <rect fill="#fff" y="259" width="640" height="37" />
+                                    <rect fill="#fff" y="333" width="640" height="37" />
+                                    <rect fill="#fff" y="407" width="640" height="37" />
+                                    <rect fill="#192f5d" width="256" height="259" />
+                                </svg>
+                            </Link>
                         </div>
                     </div>
                 </div>

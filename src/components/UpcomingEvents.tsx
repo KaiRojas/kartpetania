@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Calendar, Trophy, Users, Flag, Download, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 const registeredDrivers = [
     { number: 1, name: "Iván Machado", note: "Kartpetano 2024" },
@@ -32,6 +33,7 @@ const registeredDrivers = [
 
 export default function UpcomingEvents() {
     const [showDrivers, setShowDrivers] = useState(false);
+    const t = useTranslations('UpcomingEvents');
 
     return (
         <section className="py-24 bg-gradient-to-b from-slate-900 via-red-950/20 to-slate-900 relative overflow-hidden">
@@ -49,10 +51,10 @@ export default function UpcomingEvents() {
                 >
                     <div className="inline-flex items-center gap-2 bg-red-500/20 text-red-400 px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
                         <Calendar className="w-4 h-4" />
-                        <span>UPCOMING EVENT</span>
+                        <span>{t('upcomingEvent')}</span>
                     </div>
                     <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tight">
-                        Don&apos;t <span className="text-red-500">Miss Out</span>
+                        {t('dontMissOut')} <span className="text-red-500">{t('missOut')}</span>
                     </h2>
                 </motion.div>
 
@@ -75,9 +77,9 @@ export default function UpcomingEvents() {
                             />
                             {/* Date Badge */}
                             <div className="absolute top-4 right-4 bg-black/80 backdrop-blur-sm rounded-xl p-3 text-center border border-red-500/50">
-                                <div className="text-red-500 text-xs font-bold uppercase">December</div>
+                                <div className="text-red-500 text-xs font-bold uppercase">{t('december')}</div>
                                 <div className="text-white text-3xl font-black">14</div>
-                                <div className="text-gray-400 text-xs">Sunday</div>
+                                <div className="text-gray-400 text-xs">{t('sunday')}</div>
                             </div>
                         </div>
                     </div>
@@ -89,34 +91,28 @@ export default function UpcomingEvents() {
                                 KARTPETANOS <span className="text-red-500">2025</span>
                             </h3>
                             <p className="text-xl text-yellow-400 font-bold italic">
-                                One more year, the bravest meet in KARTPETANIA! 🔥
+                                {t('tagline')}
                             </p>
                         </div>
 
-                        <p className="text-gray-300 leading-relaxed">
-                            An individual endurance race: <strong className="text-white">100 laps</strong> on the &quot;chicane&quot; layout
-                            or <strong className="text-white">80 laps</strong> on the &quot;competition&quot; layout if exceeding 20 registered drivers.
-                            A challenge where the coveted <strong className="text-red-400">KARTPETANO 2025</strong> statuette is at stake!
-                        </p>
+                        <p className="text-gray-300 leading-relaxed" dangerouslySetInnerHTML={{ __html: t.raw('raceDescription') }} />
 
                         {/* Event Highlights */}
                         <div className="grid grid-cols-2 gap-4">
                             <div className="bg-white/5 rounded-xl p-4 border border-white/10">
                                 <Trophy className="w-8 h-8 text-yellow-500 mb-2" />
-                                <h4 className="font-bold text-white">Unique Trophy</h4>
-                                <p className="text-sm text-gray-400">The KARTPETANO 2025 statuette - within reach of very few</p>
+                                <h4 className="font-bold text-white">{t('uniqueTrophy')}</h4>
+                                <p className="text-sm text-gray-400">{t('trophyDesc')}</p>
                             </div>
                             <div className="bg-white/5 rounded-xl p-4 border border-white/10">
                                 <Flag className="w-8 h-8 text-green-500 mb-2" />
-                                <h4 className="font-bold text-white">BIREL 390cc</h4>
-                                <p className="text-sm text-gray-400">Specially prepared rental kart fleet</p>
+                                <h4 className="font-bold text-white">{t('birel390cc')}</h4>
+                                <p className="text-sm text-gray-400">{t('fleetDesc')}</p>
                             </div>
                         </div>
 
                         <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 rounded-xl p-4 border border-red-500/30">
-                            <p className="text-white font-medium">
-                                🎁 Among all participants: <span className="text-yellow-400 font-bold">4 FREE runs in KART 390CC</span> will be raffled!
-                            </p>
+                            <p className="text-white font-medium" dangerouslySetInnerHTML={{ __html: `🎁 ${t.raw('raffleNotice')}` }} />
                         </div>
 
                         {/* Registration Status */}
@@ -124,10 +120,10 @@ export default function UpcomingEvents() {
                             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
                                 <div className="flex items-center gap-2">
                                     <Users className="w-5 h-5 text-red-500" />
-                                    <span className="font-bold text-white">Registered Drivers</span>
+                                    <span className="font-bold text-white">{t('registeredDrivers')}</span>
                                 </div>
                                 <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse w-fit">
-                                    GRID FULL - 22 DRIVERS
+                                    {t('gridFull')}
                                 </span>
                             </div>
 
@@ -135,7 +131,7 @@ export default function UpcomingEvents() {
                                 onClick={() => setShowDrivers(!showDrivers)}
                                 className="w-full flex items-center justify-center gap-2 text-gray-400 hover:text-white transition-colors py-2"
                             >
-                                <span className="text-sm">{showDrivers ? 'Hide' : 'View'} Driver List</span>
+                                <span className="text-sm">{showDrivers ? t('hideDriverList') : t('viewDriverList')}</span>
                                 {showDrivers ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                             </button>
 
@@ -174,7 +170,7 @@ export default function UpcomingEvents() {
                             className="inline-flex items-center gap-3 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-500 hover:to-orange-500 text-white font-bold px-6 py-3 rounded-full transition-all hover:scale-105 shadow-lg shadow-red-600/30"
                         >
                             <Download className="w-5 h-5" />
-                            Download Regulation (PDF)
+                            {t('downloadRegulation')}
                         </a>
                     </div>
                 </motion.div>

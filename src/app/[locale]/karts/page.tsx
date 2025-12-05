@@ -66,7 +66,7 @@ export default function KartsPage() {
                         </div>
                         <h2 className="text-5xl font-black text-white italic uppercase mb-4">270cc Honda Kart</h2>
                         <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-                            Karts equipped with a 270cc Honda 4-stroke engine. This engine will delight everyone, from complete beginners who have never driven a kart before, to those with a bit more experience.
+                            {t('kart270ccDesc')}
                         </p>
                     </div>
 

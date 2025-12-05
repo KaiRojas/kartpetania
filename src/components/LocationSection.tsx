@@ -4,8 +4,11 @@ import { MapPin, Calendar, Navigation } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
 export default function LocationSection() {
+    const t = useTranslations('Location');
+
     return (
         <section className="py-24 bg-slate-950 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -18,10 +21,10 @@ export default function LocationSection() {
                     className="text-center mb-12"
                 >
                     <h2 className="text-4xl md:text-5xl font-black italic text-white uppercase tracking-tight">
-                        Find <span className="text-red-600">Us</span>
+                        {t('findUs')} <span className="text-red-600">{t('us')}</span>
                     </h2>
                     <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
-                        Located in La Higuera, Segovia - just a short drive from Madrid
+                        {t('subtitle')}
                     </p>
                 </motion.div>
 
@@ -57,7 +60,7 @@ export default function LocationSection() {
                                 <div className="bg-red-600/20 p-2 rounded-lg">
                                     <MapPin className="w-5 h-5 text-red-500" />
                                 </div>
-                                <h3 className="text-lg font-bold text-white">Address</h3>
+                                <h3 className="text-lg font-bold text-white">{t('address')}</h3>
                             </div>
                             <div className="text-gray-300 text-sm leading-relaxed">
                                 <p className="font-semibold text-white">Circuito Kartpetania</p>
@@ -74,14 +77,14 @@ export default function LocationSection() {
                                 className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-white text-slate-900 px-4 py-2.5 text-sm font-bold transition-all hover:bg-gray-200 hover:scale-[1.02]"
                             >
                                 <Navigation className="w-4 h-4" />
-                                Get Directions
+                                {t('getDirections')}
                             </a>
                             <Link
                                 href="/horarios"
                                 className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 text-white px-4 py-2.5 text-sm font-bold transition-all hover:bg-red-700 hover:scale-[1.02]"
                             >
                                 <Calendar className="w-4 h-4" />
-                                Book Now
+                                {t('bookNow')}
                             </Link>
                         </div>
                     </motion.div>

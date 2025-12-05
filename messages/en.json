@@ -54,7 +54,8 @@
     "electricPolicyTitle": "ELECTRIC VEHICLE USER INFORMATION",
     "electricPolicy": "ELECTRIC VEHICLES MAY NOT RIDE WITHOUT CARRYING A SPECIAL 5kg CO2 EXTINGUISHER.",
     "privatePolicyTitle": "PRIVATE KART USER INFORMATION",
-    "privatePolicy": "To ride on Sundays with a private kart, we will open free sessions provided a minimum of 5 Karts join and notify in advance."
+    "privatePolicy": "To ride on Sundays with a private kart, we will open free sessions provided a minimum of 5 Karts join and notify in advance.",
+    "importantInfo": "Important Information"
   },
   "ServicesPage": {
     "title": "Services & Facilities",
@@ -116,6 +117,7 @@
     "rule2": "No loose clothing (scarves) or open shoes (flip-flops) allowed.",
     "rule3": "Respect flags and marshal instructions.",
     "rule4": "Deliberate contact between karts is prohibited.",
+    "kart270ccDesc": "Karts equipped with a 270cc Honda 4-stroke engine. This engine will delight everyone, from complete beginners who have never driven a kart before, to those with a bit more experience.",
     "flagshipBadge": "Flagship Experience",
     "perfectForEveryone": "Perfect for Everyone",
     "ages12Plus": "Ages 12+",
@@ -303,5 +305,54 @@
   "VideoGallery": {
     "title": "Track Action",
     "subtitle": "Watch the adrenaline-pumping action at Kartpetania."
+  },
+  "UpcomingEvents": {
+    "upcomingEvent": "UPCOMING EVENT",
+    "dontMissOut": "Don't",
+    "missOut": "Miss Out",
+    "tagline": "One more year, the bravest meet in KARTPETANIA! 🔥",
+    "raceDescription": "An individual endurance race: <strong>100 laps</strong> on the \"chicane\" layout or <strong>80 laps</strong> on the \"competition\" layout if exceeding 20 registered drivers. A challenge where the coveted <strong>KARTPETANO 2025</strong> statuette is at stake!",
+    "uniqueTrophy": "Unique Trophy",
+    "trophyDesc": "The KARTPETANO 2025 statuette - within reach of very few",
+    "birel390cc": "BIREL 390cc",
+    "fleetDesc": "Specially prepared rental kart fleet",
+    "raffleNotice": "Among all participants: <span>4 FREE runs in KART 390CC</span> will be raffled!",
+    "registeredDrivers": "Registered Drivers",
+    "gridFull": "GRID FULL - 22 DRIVERS",
+    "hideDriverList": "Hide Driver List",
+    "viewDriverList": "View Driver List",
+    "downloadRegulation": "Download Regulation (PDF)",
+    "december": "December",
+    "sunday": "Sunday"
+  },
+  "Location": {
+    "findUs": "Find",
+    "us": "Us",
+    "subtitle": "Located in La Higuera, Segovia - just a short drive from Madrid",
+    "address": "Address",
+    "getDirections": "Get Directions",
+    "bookNow": "Book Now"
+  },
+  "Schedule": {
+    "decemberSchedule": "Schedule",
+    "rentalKart": "Rental Kart",
+    "specialEvent": "Special Event",
+    "bikesAllowed": "Bikes Allowed",
+    "date": "Date",
+    "morning": "Morning",
+    "afternoon": "Afternoon",
+    "sat": "Sat",
+    "sun": "Sun",
+    "mon": "Mon",
+    "dec": "Dec"
+  },
+  "Hero": {
+    "experienceThe": "Experience the",
+    "adrenaline": "Adrenaline",
+    "subtitle": "Immerse yourself in the world of professional karting. From our technical track to our high-performance fleet."
+  },
+  "Gallery": {
+    "showLess": "Show Less",
+    "viewMore": "View More Photos"
   }
 }

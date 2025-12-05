@@ -5,6 +5,8 @@ import { routing } from '@/i18n/routing';
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { SeasonalEffectsProvider } from '@/components/SeasonalEffectsContext';
+import SeasonalEffects from '@/components/SeasonalEffects';
 import "../globals.css";
 
 const geistSans = Geist({
@@ -47,11 +49,14 @@ export default async function LocaleLayout({
     <html lang={locale}>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950 text-white flex flex-col min-h-screen`}>
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          <div className="flex-grow">
-            {children}
-          </div>
-          <Footer />
+          <SeasonalEffectsProvider>
+            <SeasonalEffects />
+            <Navbar />
+            <div className="flex-grow">
+              {children}
+            </div>
+            <Footer />
+          </SeasonalEffectsProvider>
         </NextIntlClientProvider>
       </body>
     </html>

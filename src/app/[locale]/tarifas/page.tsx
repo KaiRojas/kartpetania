@@ -40,8 +40,8 @@ export default function RatesPage() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
                     <div className="text-center mb-10">
-                        <div className="inline-flex items-center gap-2 bg-green-500/10 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                            <Zap className="w-4 h-4" />
+                        <div className="inline-flex items-center gap-3 bg-green-500/20 text-green-400 px-6 py-3 rounded-full text-lg font-bold mb-4 border border-green-500/30">
+                            <Zap className="w-5 h-5" />
                             <span>{t('standardRatesTitle')}</span>
                         </div>
                     </div>
@@ -95,8 +95,8 @@ export default function RatesPage() {
                     transition={{ duration: 0.5, delay: 0.25 }}
                 >
                     <div className="text-center mb-10">
-                        <div className="inline-flex items-center gap-2 bg-amber-500/10 text-amber-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                            <Info className="w-4 h-4" />
+                        <div className="inline-flex items-center gap-3 bg-amber-500/20 text-amber-400 px-6 py-3 rounded-full text-lg font-bold mb-4 border border-amber-500/30">
+                            <Info className="w-5 h-5" />
                             <span>{t('importantInfoTitle')}</span>
                         </div>
                     </div>
@@ -149,8 +149,8 @@ export default function RatesPage() {
                     transition={{ duration: 0.5, delay: 0.3 }}
                 >
                     <div className="text-center mb-10">
-                        <div className="inline-flex items-center gap-2 bg-cyan-500/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                            <ClipboardList className="w-4 h-4" />
+                        <div className="inline-flex items-center gap-3 bg-cyan-500/20 text-cyan-400 px-6 py-3 rounded-full text-lg font-bold mb-4 border border-cyan-500/30">
+                            <ClipboardList className="w-5 h-5" />
                             <span>{t('trackAccessTitle')}</span>
                         </div>
                     </div>
@@ -179,8 +179,8 @@ export default function RatesPage() {
                     transition={{ duration: 0.5, delay: 0.35 }}
                 >
                     <div className="text-center mb-10">
-                        <div className="inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-400 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                            <CreditCard className="w-4 h-4" />
+                        <div className="inline-flex items-center gap-3 bg-yellow-500/20 text-yellow-400 px-6 py-3 rounded-full text-lg font-bold mb-4 border border-yellow-500/30">
+                            <CreditCard className="w-5 h-5" />
                             <span>{t('membershipsTitle')}</span>
                         </div>
                     </div>
@@ -251,13 +251,15 @@ export default function RatesPage() {
                         <h3 className="text-2xl font-bold text-white mb-2">{t('insuranceTitle')}</h3>
                         <p className="text-gray-300">{t('insuranceDesc')}</p>
                     </div>
-                    <Link
-                        href="/insurance"
+                    <a
+                        href="https://www.skm-segurosdeportivos.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transition-colors"
                     >
                         {t('purchaseInsurance')}
                         <ChevronRight className="w-4 h-4" />
-                    </Link>
+                    </a>
                 </motion.section>
 
             </div>
